@@ -45,3 +45,14 @@ else
 // System.Console.WriteLine($"you are younger than or equal to Kescha: {age<=keschasAge}");
 // System.Console.WriteLine($"Your age is equal to Kescha's age: {age==keschasAge}");
 // System.Console.WriteLine($"Your age is not equal to Kescha's age {age!=keschasAge}");
+
+System.Console.WriteLine("Let me tell you about my friends.");
+
+string[] FriendsName = {"Vasya","Kasee","Valya"};
+int[] FriendsAge = {1, 2, 2};
+string[] adress = {"Madagascar","New Zealand", "Australia"};
+
+for(int i=0;i<FriendsName.Length;i++)
+{
+  System.Console.WriteLine($"{FriendsName[0]} is {FriendsAge[0]} year old. He is from {adress[0]}");
+}
