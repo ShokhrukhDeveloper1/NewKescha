@@ -6,6 +6,13 @@ string name=Console.ReadLine();
 string greetings = $"Hello, {name}";
 System.Console.WriteLine(greetings);
 
+string password="";
+do
+{
+  System.Console.Write("Enter password: ");
+  password=Console.ReadLine();
+}while(password!="123");
+
 System.Console.Write("Enter your age: ");
 string ageAsString = Console.ReadLine();
 
