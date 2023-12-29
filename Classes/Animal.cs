@@ -2,32 +2,86 @@ namespace NEWKESCHA.Classes
 {
   class Animal
   {
-    public Animal(string name, int userAge, int animalAge) // Animal classidan konstruktor yaratish.
-    {
-      Name=name;
-      Age=animalAge;
-      Agedifference = userAge - Age;
-    }
 
     public string Name { get; set; }
 
-    private int age; // age field hisoblanadi
+    private int animalAge; // age field hisoblanadi
     public int Age // bu age ning property si xususiyati hisoblanadi.
     {
       get
       {
-        return age;
+        return animalAge;
       }
       set
       {
         if(value>0)
         {
-          age=value;
+          animalAge=value;
         }
       }
     }
 
+    public Animal(string animalName, int animalAge)
+    {
+      Age=animalAge;
+      Name=animalName;
+    }
+
     public int Agedifference { get; set; }
+
+    public void PrintAgeDifference()
+    {
+      Console.WriteLine($"The difference between your and {Name}'s age is {Agedifference}");
+    }
+
+    public void CompareAges(int userAge)
+    {
+      if(userAge>Age)
+      {
+        Console.WriteLine("You are older!");
+      }
+      else if(userAge==Age)
+      {
+        Console.WriteLine("You are equal!");
+      }
+      else
+      {
+        Console.WriteLine("You are younger!");
+      }
+    }
+
+    public void TellAboutFriends(string userName, int userAge)
+    {
+      Console.WriteLine("Let me tell you about my friends.");
+
+      string[] FriendsName = {"Vasya","Kasee",userName};
+      int[] FriendsAge = {1, 2, userAge};
+      string[] adress = {"Madagascar","New Zealand", "Uzbekistan"};
+
+      for(int i=0; i < FriendsName.Length; i++)
+      {
+        Console.WriteLine($"{FriendsName[i]} is {FriendsAge[i]} year old. He is from {adress[i]}");
+      }
+    }
+
+    public int CalculateAgeDifference(int userAge)
+    {
+      return userAge - Age;
+    }
+
+    public void CalculateAgeDifferenceWithNoReturn(int userAge)
+    {
+      Agedifference = userAge - Age;
+    }
+
+    public void Greet(string userName)
+    {
+      if(userName=="")
+      {
+        userName="\"Unknown person\"";
+      }
+      Console.WriteLine($"Hello, {userName}");
+    }
 
   }
 }

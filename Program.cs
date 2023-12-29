@@ -1,58 +1,38 @@
 ﻿using System;
 using NEWKESCHA.Classes;
 
-System.Console.Write("Enter your name: ");
-string name=Console.ReadLine();
-
-string greetings = $"Hello, {name}";
-System.Console.WriteLine(greetings);
-
-string password="";
-do
+namespace NEWKESCHA
 {
-  System.Console.Write("Enter password: ");
-  password=Console.ReadLine();
-}while(password!="123");
+  class Program
+  {
+    static void Main()
+    {
+      Animal kescha = new Animal(animalName: "Kescha", animalAge: 3);
 
-System.Console.Write("Enter your age: ");
-string ageAsString = Console.ReadLine();
+      Console.Write("Enter your name: ");
+      string userName=Console.ReadLine();
 
-System.Console.WriteLine("Converting...");
+      kescha.Greet(userName);
 
-int age = Convert.ToInt32(ageAsString);
-System.Console.WriteLine($"Succesfully converted! {age}");
+      string password="";
+      do
+      {
+        Console.Write("Enter password: ");
+        password=Console.ReadLine();
+      }while(password!="123");
 
-Animal kescha = new Animal(name: "Kescha", userAge: age, animalAge: 3);
+      Console.Write("Enter your age: ");
+      string ageAsString = Console.ReadLine();
 
-System.Console.WriteLine($"The difference between your and kescha's age is {kescha.Agedifference}");
+      Console.WriteLine("Converting...");
 
-if(age>kescha.Age)
-{
-  System.Console.WriteLine("You are older!");
-}
-else if(age==kescha.Age)
-{
-  System.Console.WriteLine("You are equal!");
-}
-else
-{
-  System.Console.WriteLine("You are younger!");
-}
+      int userAge = Convert.ToInt32(ageAsString);
+      Console.WriteLine($"Succesfully converted! {userAge}");
 
-// System.Console.WriteLine($"you are older than or equal to Kescha: {age>=keschasAge}");
-// System.Console.WriteLine($"you are older than Kescha: {age>keschasAge}");
-// System.Console.WriteLine($"you are younger than Kescha: {age<keschasAge}");
-// System.Console.WriteLine($"you are younger than or equal to Kescha: {age<=keschasAge}");
-// System.Console.WriteLine($"Your age is equal to Kescha's age: {age==keschasAge}");
-// System.Console.WriteLine($"Your age is not equal to Kescha's age {age!=keschasAge}");
-
-System.Console.WriteLine("Let me tell you about my friends.");
-
-string[] FriendsName = {"Vasya","Kasee","Valya"};
-int[] FriendsAge = {1, 2, 2};
-string[] adress = {"Madagascar","New Zealand", "Australia"};
-
-for(int i=0;i<FriendsName.Length;i++)
-{
-  System.Console.WriteLine($"{FriendsName[i]} is {FriendsAge[i]} year old. He is from {adress[i]}");
+      kescha.CalculateAgeDifferenceWithNoReturn(userAge);
+      kescha.PrintAgeDifference();
+      kescha.CompareAges(userAge);
+      kescha.TellAboutFriends(userName, userAge);
+    }
+  }
 }
