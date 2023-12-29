@@ -1,4 +1,5 @@
 ﻿using System;
+using NEWKESCHA.Classes;
 
 System.Console.Write("Enter your name: ");
 string name=Console.ReadLine();
@@ -21,16 +22,18 @@ System.Console.WriteLine("Converting...");
 int age = Convert.ToInt32(ageAsString);
 System.Console.WriteLine($"Succesfully converted! {age}");
 
-int keschasAge = 3;
-int ageDifference = age - keschasAge;
+Animal kescha = new Animal();
+kescha.Age=3;
+
+int ageDifference = age - kescha.Age;
 
 System.Console.WriteLine($"The difference between your and kescha's age is {ageDifference}");
 
-if(age>keschasAge)
+if(age>kescha.Age)
 {
   System.Console.WriteLine("You are older!");
 }
-else if(age==keschasAge)
+else if(age==kescha.Age)
 {
   System.Console.WriteLine("You are equal!");
 }
