@@ -22,12 +22,9 @@ System.Console.WriteLine("Converting...");
 int age = Convert.ToInt32(ageAsString);
 System.Console.WriteLine($"Succesfully converted! {age}");
 
-Animal kescha = new Animal();
-kescha.Age=3;
+Animal kescha = new Animal(name: "Kescha", userAge: age, animalAge: 3);
 
-int ageDifference = age - kescha.Age;
-
-System.Console.WriteLine($"The difference between your and kescha's age is {ageDifference}");
+System.Console.WriteLine($"The difference between your and kescha's age is {kescha.Agedifference}");
 
 if(age>kescha.Age)
 {
@@ -57,5 +54,5 @@ string[] adress = {"Madagascar","New Zealand", "Australia"};
 
 for(int i=0;i<FriendsName.Length;i++)
 {
-  System.Console.WriteLine($"{FriendsName[0]} is {FriendsAge[0]} year old. He is from {adress[0]}");
+  System.Console.WriteLine($"{FriendsName[i]} is {FriendsAge[i]} year old. He is from {adress[i]}");
 }
