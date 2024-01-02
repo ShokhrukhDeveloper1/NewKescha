@@ -7,12 +7,17 @@ namespace NEWKESCHA
   {
     static void Main()
     {
-      Animal kescha = new Animal(animalName: "Kescha", animalAge: 3);
+      Animal kescha = new Bird(animalName: "Kescha", animalAge: 3);
+      Animal kasee = new Pet(animalName: "Kasee", animalAge: 5);
+
 
       Console.Write("Enter your name: ");
       string userName=Console.ReadLine();
 
+      Console.WriteLine("Kescha says:");
       kescha.Greet(userName);
+      Console.WriteLine("Kasee says:");
+      kasee.Greet(userName);
 
       string password="";
       do
