@@ -1,12 +1,12 @@
 namespace NEWKESCHA.Classes
 {
-  class Animal
+  public class Animal
   {
 
     public string Name { get; set; }
 
-    private int animalAge; // age field hisoblanadi
-    public int Age // bu age ning property si xususiyati hisoblanadi.
+    private int animalAge; // animalAge field hisoblanadi
+    public int Age // bu animalAge ning property si xususiyati hisoblanadi.
     {
       get
       {
@@ -74,7 +74,7 @@ namespace NEWKESCHA.Classes
       Agedifference = userAge - Age;
     }
 
-    public void Greet(string userName)
+    public virtual void Greet(string userName)
     {
       if(userName=="")
       {
