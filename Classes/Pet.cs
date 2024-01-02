@@ -13,6 +13,11 @@ namespace NEWKESCHA.Classes
       System.Console.WriteLine($"Meow, {userName}");
     }
 
+    public override void AbstraktMethod(string userName)
+    {
+      Console.WriteLine("abstract method added!!!");
+    }
+
   }
 
 }

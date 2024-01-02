@@ -8,10 +8,15 @@ namespace NEWKESCHA.Classes
 
       }
 
-        public override void Greet(string userName)
-        {
-          Console.WriteLine($"Hello {userName}");
-        }
+      public override void Greet(string userName)
+      {
+        Console.WriteLine($"Hello {userName}");
+      }
+
+      public override void AbstraktMethod(string userName)
+      {
+        Console.WriteLine("Abstract method added");
+      }
 
     }
 

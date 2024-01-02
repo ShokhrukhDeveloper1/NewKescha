@@ -1,6 +1,6 @@
 namespace NEWKESCHA.Classes
 {
-  public class Animal
+  public abstract class Animal
   {
 
     public string Name { get; set; }
@@ -82,6 +82,8 @@ namespace NEWKESCHA.Classes
       }
       Console.WriteLine($"Hello, {userName}");
     }
+
+    public abstract void AbstraktMethod(string userName);
 
   }
 }
