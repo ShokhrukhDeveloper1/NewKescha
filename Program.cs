@@ -10,10 +10,12 @@ namespace NEWKESCHA
       try
       {
         Animal kescha = new Bird(animalName: "Kescha", animalAge: 3);
-        Animal kasee = new Pet(animalName: "Kasee", animalAge: 5);
+        Pet kasee = new Pet(animalName: "Kasee", animalAge: 5);
+        kasee.Type =Enums.PetType.Cat;
 
         Console.WriteLine("Kescha was created: "+kescha.CreatedDate);
         Console.WriteLine("Kasee was created: "+kasee.CreatedDate);
+        Console.WriteLine(kasee.Type);
 
         Console.Write("Enter your name: ");
         string userName=Console.ReadLine();

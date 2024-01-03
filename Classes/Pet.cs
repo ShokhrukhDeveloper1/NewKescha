@@ -1,8 +1,11 @@
+using NEWKESCHA.Enums;
+
 namespace NEWKESCHA.Classes
 {
 
   public class Pet : Animal
   {
+    public PetType Type { get; set; }
     public Pet(string animalName,int animalAge):base(animalName,animalAge)
     {
 
