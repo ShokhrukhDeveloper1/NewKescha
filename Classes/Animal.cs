@@ -21,10 +21,13 @@ namespace NEWKESCHA.Classes
       }
     }
 
+    public DateTimeOffset CreatedDate { get; set; }
+
     public Animal(string animalName, int animalAge)
     {
       Age=animalAge;
       Name=animalName;
+      CreatedDate = DateTimeOffset.Now;
     }
 
     public int Agedifference { get; set; }

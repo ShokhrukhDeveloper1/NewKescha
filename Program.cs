@@ -12,6 +12,9 @@ namespace NEWKESCHA
         Animal kescha = new Bird(animalName: "Kescha", animalAge: 3);
         Animal kasee = new Pet(animalName: "Kasee", animalAge: 5);
 
+        Console.WriteLine("Kescha was created: "+kescha.CreatedDate);
+        Console.WriteLine("Kasee was created: "+kasee.CreatedDate);
+
         Console.Write("Enter your name: ");
         string userName=Console.ReadLine();
 
