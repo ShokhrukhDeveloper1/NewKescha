@@ -1,6 +1,6 @@
 namespace NEWKESCHA.Classes
 {
-  public abstract class Animal
+  public abstract class Animal : IAnimal
   {
 
     public string Name { get; set; }
